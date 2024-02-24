@@ -1,7 +1,7 @@
 import React from 'react'
 
 // components
-import Edamam from 'index'
+import Edamam from './index'
 
 function App () {
   return (
