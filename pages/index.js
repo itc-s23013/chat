@@ -1,19 +1,14 @@
 import React, { useState, useEffect } from 'react'
 
-// components
 import Recipe from './Recipe'
-
 const Edamam = () => {
-  // keyの設置
   const APPLICATION_ID = '43df669e'
   const APPLICATION_KEY = '9c55d3e0def0a4217fc88980063d2985'
 
-  // stateの作成
   const [search, setSearch] = useState('')
   const [query, setQuery] = useState('banana', 'orange')
   const [recipes, setRecipes] = useState([])
 
-  // APIの取得
   const getRecipes = async () => {
     const response = await fetch(
       `https://api.edamam.com/search?q=${query}&app_id=${APPLICATION_ID}&app_key=${APPLICATION_KEY}`
@@ -29,7 +24,6 @@ const Edamam = () => {
     setSearch('')
   }
 
-  // 入力した時にsearchの更新
   const updateSearch = e => {
     setSearch(e.target.value)
   }

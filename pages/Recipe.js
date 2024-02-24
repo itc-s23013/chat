@@ -2,7 +2,7 @@ import React from 'react'
 
 const Recipe = props => {
   console.log(props)
-  // props.ingredients が存在しない場合に空配列を代入
+
   const ingredients = props.ingredients || []
 
   return (
