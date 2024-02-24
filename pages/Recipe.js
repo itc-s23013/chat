@@ -6,8 +6,8 @@ const Recipe = props => {
     <div>
       <h1>{props.title}</h1>
       <ol>
-        {props.ingredients.map(ingredients => (
-          <li>{ingredients.text}</li>
+        {props.ingredients.map(ingredient => (
+          <li key={ingredient.id}>{ingredient.text}</li>
         ))}
       </ol>
       <p>{props.calories} cal</p>
